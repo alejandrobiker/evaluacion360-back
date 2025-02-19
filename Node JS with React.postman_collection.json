@@ -1,0 +1,380 @@
+{
+	"info": {
+		"_postman_id": "aa5ff17b-198b-4c2c-8eae-d3011062d4ba",
+		"name": "Node JS with React",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16901954",
+		"_collection_link": "https://solar-capsule-191933.postman.co/workspace/Xticketing~f916a2ff-4df7-4b5f-ad33-ff3cbfa19ea6/collection/16901954-aa5ff17b-198b-4c2c-8eae-d3011062d4ba?action=share&source=collection_link&creator=16901954"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Registar usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"john_doe\",\r\n    \"email\": \"john@example.com\",\r\n    \"password\": \"securePassword123\",\r\n    \"role\": \"Employee\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"john@example.com\",\r\n    \"password\": \"securePassword123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/auth/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Empleados",
+			"item": [
+				{
+					"name": "Empleados",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiam9obl9kb2UiLCJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJyb2xlIjoiQWRtaW4ifSwiaWF0IjoxNzM5OTI2MDc2LCJleHAiOjE3Mzk5Mjk2NzZ9.r-dUAzQC2ucaci7Z0qmfHWK-PfUjQx-nGShFhSdt5W8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/employees",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crear empleados",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiam9obl9kb2UiLCJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJyb2xlIjoiQWRtaW4ifSwiaWF0IjoxNzM5OTEzOTkwLCJleHAiOjE3Mzk5MTc1OTB9.2kFyFtdd1C8p1wFy0DzQUiLDFfOj7GrO_xzlLci7Rdk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Maximilano Figuera\",\r\n    \"email\": \"maximiliano@example.com\",\r\n    \"position\": \"Encargado\",\r\n    \"department\": \"Administracion\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/employees",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"employees"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Evaluaciones",
+			"item": [
+				{
+					"name": "Crear evaluacion",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiam9obl9kb2UiLCJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJyb2xlIjoiQWRtaW4ifSwiaWF0IjoxNzM5OTI2MDc2LCJleHAiOjE3Mzk5Mjk2NzZ9.r-dUAzQC2ucaci7Z0qmfHWK-PfUjQx-nGShFhSdt5W8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"employeeId\": \"67b3ee6c677bc8b55e27370b\",\r\n    \"evaluatorId\": \"67b3de4b8d6dd85684d088c3\",\r\n    \"score\": 100,\r\n    \"feedback\": \"Maxima puntuacion!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/evaluations",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"evaluations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Evaluacion especifica",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiam9obl9kb2UiLCJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJyb2xlIjoiQWRtaW4ifSwiaWF0IjoxNzM5OTI2MDc2LCJleHAiOjE3Mzk5Mjk2NzZ9.r-dUAzQC2ucaci7Z0qmfHWK-PfUjQx-nGShFhSdt5W8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/evaluations/67b52becfcdaa9bdc85c8c25",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"evaluations",
+								"67b52becfcdaa9bdc85c8c25"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar evaluacion",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"score\": 6,\r\n    \"feedback\": \"Lastimosamente reprobo!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/evaluations/67b4e272a1eb46c244cb5c65",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"evaluations",
+								"67b4e272a1eb46c244cb5c65"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Evaluaciones por empleado",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiam9obl9kb2UiLCJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJyb2xlIjoiQWRtaW4ifSwiaWF0IjoxNzM5OTI2MDc2LCJleHAiOjE3Mzk5Mjk2NzZ9.r-dUAzQC2ucaci7Z0qmfHWK-PfUjQx-nGShFhSdt5W8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/evaluations/employee/67b3ee6c677bc8b55e27370b",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"evaluations",
+								"employee",
+								"67b3ee6c677bc8b55e27370b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Feedback",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiam9obl9kb2UiLCJlbWFpbCI6ImpvaG5AZXhhbXBsZS5jb20iLCJyb2xlIjoiQWRtaW4ifSwiaWF0IjoxNzM5OTI2MDc2LCJleHAiOjE3Mzk5Mjk2NzZ9.r-dUAzQC2ucaci7Z0qmfHWK-PfUjQx-nGShFhSdt5W8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"evaluationId\": \"67b52becfcdaa9bdc85c8c25\",\r\n    \"userId\": \"67b4fd17677bc8b55e27372e\",\r\n    \"comments\": \"Animo!\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/api/feedback",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"feedback"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reports",
+			"item": [
+				{
+					"name": "Generar reporte de evaluación para un empleado",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiUmFtb24iLCJlbWFpbCI6InJhbW9uQGV4YW1wbGUuY29tIiwicm9sZSI6IkVtcGxveWVlIn0sImlhdCI6MTczOTkyNzg0OSwiZXhwIjoxNzM5OTMxNDQ5fQ.7aNAEvTU8CVv49ZY5gutEn8YH66UM2k5bXrHAm0MFgI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/reports/employee/67b3ee6c677bc8b55e27370b",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"reports",
+								"employee",
+								"67b3ee6c677bc8b55e27370b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reporte en una lista",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoiUmFtb24iLCJlbWFpbCI6InJhbW9uQGV4YW1wbGUuY29tIiwicm9sZSI6IkVtcGxveWVlIn0sImlhdCI6MTczOTkyNzg0OSwiZXhwIjoxNzM5OTMxNDQ5fQ.7aNAEvTU8CVv49ZY5gutEn8YH66UM2k5bXrHAm0MFgI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/reports/employee/list/67b3ee6c677bc8b55e27370b",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"reports",
+								"employee",
+								"list",
+								"67b3ee6c677bc8b55e27370b"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
