@@ -1,0 +1,25 @@
+{
+  "name": "evaluaciones360",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.10.1",
+    "pdfkit": "^0.16.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
