@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
@@ -7,6 +8,9 @@ dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+// Habilitar CORS para todas las rutas
+app.use(cors());
 
 // Conectar a MongoDB
 mongoose.connect(process.env.MONGO_URI)
